@@ -1,0 +1,9 @@
+<button class="btn btn-primary" (click)="onDisplay()">Display Details</button>
+<p *ngIf="!displayP">Secret Password</p>
+
+<div *ngFor="let logItem of log; let i = index"
+[ngStyle]="{backgroundColor: i >= 4 ? 'lightblue' : 'transparent'}"
+    [ngClass]="{onFive: i >= 4}"
+>
+<li>{{logItem}}</li>
+</div>
